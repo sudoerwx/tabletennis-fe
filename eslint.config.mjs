@@ -4,6 +4,7 @@ import tseslint from "typescript-eslint";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import { fixupConfigRules } from "@eslint/compat";
 import eslintConfigPrettier from "eslint-config-prettier";
+import queryPlugin from "@tanstack/eslint-plugin-query";
 
 export default [
   { languageOptions: { globals: globals.browser } },
@@ -11,4 +12,5 @@ export default [
   ...tseslint.configs.recommended,
   ...fixupConfigRules(pluginReactConfig),
   eslintConfigPrettier,
+  queryPlugin,
 ];
