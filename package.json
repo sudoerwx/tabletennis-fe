@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.6.0",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@tanstack/react-query": "^5.40.1",
     "@tanstack/react-query-devtools": "4",
     "@testing-library/jest-dom": "^5.16.1",
@@ -17,8 +24,10 @@
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.0",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.11",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.4.2",
@@ -32,7 +41,8 @@
     "workbox-range-requests": "^6.4.2",
     "workbox-routing": "^6.4.2",
     "workbox-strategies": "^6.4.2",
-    "workbox-streams": "^6.4.2"
+    "workbox-streams": "^6.4.2",
+    "yup": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -69,6 +79,9 @@
     "prettier": "3.3.1",
     "typescript-eslint": "^7.12.0"
   },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
+  },
   "lint-staged": {
     "*.css": [
       "eslint --fix",
@@ -81,5 +94,12 @@
     "!(*.css|*.js|*.jsx)": [
       "prettier --write"
     ]
+  },
+  "compilerOptions": {
+    "paths": {
+      "@mui/styled-engine": [
+        "./node_modules/@mui/styled-engine-sc"
+      ]
+    }
   }
 }
